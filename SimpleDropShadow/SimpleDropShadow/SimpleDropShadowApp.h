@@ -5,6 +5,7 @@
 #include "poObject.h"
 #include "poShapeBasics2D.h"
 #include "DropShadow.h"
+#include "poControlPanel.h"
 
 class SimpleDropShadowApp : public poObject {
 public:
@@ -21,5 +22,7 @@ public:
 	
 	DropShadow	*imageAndShadow;
 	poRectShape	*image;
+	
+	poControlPanel	*control;
 };
 

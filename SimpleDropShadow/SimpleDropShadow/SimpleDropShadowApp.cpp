@@ -9,7 +9,7 @@
 
 // APP CONSTRUCTOR. Create all objects here.
 SimpleDropShadowApp::SimpleDropShadowApp() {
-	addModifier(new poCamera2D(poColor::dkGrey));
+	addModifier(new poCamera2D(poColor(.2f,.2f,.23f)));
 	
 	// load source image
 	image = new poRectShape("ghostly.jpg");
@@ -37,6 +37,12 @@ SimpleDropShadowApp::SimpleDropShadowApp() {
 	
 	// add image and drop shadow to screen
 	addChild(imageAndShadow);
+	
+	// add control panel for drop shadow
+	control = new poControlPanel( "controlPanel", poColor(0,0.3,0.3,0.6) );
+	control->addSliderF( "amplitude",0.f, 100.f, this );
+	control->addSliderF( "alpha",0.f, 1.f, this );
+	addChild(control);
 }
 
 // APP DESTRUCTOR. Delete all objects here.
@@ -60,5 +66,11 @@ void SimpleDropShadowApp::eventHandler(poEvent *event) {
 
 // MESSAGE HANDLER. Called from within the app. Use for message passing.
 void SimpleDropShadowApp::messageHandler(const std::string &msg, const poDictionary& dict) {
+	if ( msg == "amplitude" ) {
+        imageAndShadow->setSpread(control->getFloat("amplitude"));
+    }
 	
+	if ( msg == "alpha" ) {
+        imageAndShadow->setAlpha(control->getFloat("alpha"));
+    }
 }
