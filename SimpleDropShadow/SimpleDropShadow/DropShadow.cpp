@@ -2,7 +2,7 @@
 
 DropShadow::DropShadow( poObject *src, float spread, float a )
 {
-	poPoint dimensions = src->getBounds().getSize();
+	dimensions = src->getBounds().getSize();
 	
 	top_left = new poRectShape( spread, spread );
 	top_center = new poRectShape( dimensions.x, spread );
@@ -112,7 +112,7 @@ void DropShadow::setAlpha(float a){
 	bottom_right->alpha = a;
 }
 
-void DropShadow::setSpread( poPoint dimensions, float spread){
+void DropShadow::setSpread( float spread){
 	
 	top_left->reshape( spread, spread );
 	top_center->reshape( dimensions.x, spread );
@@ -125,7 +125,6 @@ void DropShadow::setSpread( poPoint dimensions, float spread){
 	bottom_right->reshape( spread, spread );
 	
 }
-
 
 FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientation)
 {

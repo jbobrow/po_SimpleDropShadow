@@ -27,7 +27,7 @@ public:
 	virtual void messageHandler(const std::string &msg, const poDictionary& dict=poDictionary());
 	
 	void setAlpha( float a );
-	void setSpread( poPoint dimensions, float spread );
+	void setSpread( float spread );
 	
 	poRectShape* top_left;
 	poRectShape* top_center;
@@ -39,7 +39,7 @@ public:
 	poRectShape* bottom_center;
 	poRectShape* bottom_right;
 	
-	poPoint* dimensions;
+	poPoint dimensions;
 };
 
 
