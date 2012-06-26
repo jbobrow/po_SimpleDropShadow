@@ -1,0 +1,235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BF92A78159A1966002281E4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BF92A77159A1966002281E4 /* AppDelegate.mm */; };
+		2BF92A7A159A1966002281E4 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92A79159A1966002281E4 /* en.strings */; };
+		2BF92A7C159A1966002281E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF92A7B159A1966002281E4 /* main.m */; };
+		2BF92A7E159A1966002281E4 /* main.pch in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92A7D159A1966002281E4 /* main.pch */; };
+		2BF92A81159A1966002281E4 /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92A80159A1966002281E4 /* main.xib */; };
+		2BF92A84159A1966002281E4 /* poOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BF92A83159A1966002281E4 /* poOpenGLView.mm */; };
+		2BF92A88159A1966002281E4 /* SimpleDropShadowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BF92A87159A1966002281E4 /* SimpleDropShadowApp.cpp */; };
+		2BF92A8A159A1966002281E4 /* AppConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BF92A89159A1966002281E4 /* AppConfig.cpp */; };
+		2BF92A8C159A1966002281E4 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF92A8B159A1966002281E4 /* OpenSans-Regular.ttf */; };
+		2BF92A94159A198D002281E4 /* DropShadow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BF92A92159A198D002281E4 /* DropShadow.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BF92A6F159A1966002281E4 /* SimpleDropShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDropShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BF92A74159A1966002281E4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../platform/Debug.xcconfig; sourceTree = "<group>"; };
+		2BF92A75159A1966002281E4 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../platform/Release.xcconfig; sourceTree = "<group>"; };
+		2BF92A76159A1966002281E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../platform/AppDelegate.h; sourceTree = "<group>"; };
+		2BF92A77159A1966002281E4 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../platform/AppDelegate.mm; sourceTree = "<group>"; };
+		2BF92A79159A1966002281E4 /* en.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en.strings; path = ../platform/en.strings; sourceTree = "<group>"; };
+		2BF92A7B159A1966002281E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../platform/main.m; sourceTree = "<group>"; };
+		2BF92A7D159A1966002281E4 /* main.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = main.pch; path = ../platform/main.pch; sourceTree = "<group>"; };
+		2BF92A7F159A1966002281E4 /* main.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = main.plist; path = ../platform/main.plist; sourceTree = "<group>"; };
+		2BF92A80159A1966002281E4 /* main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = main.xib; path = ../platform/main.xib; sourceTree = "<group>"; };
+		2BF92A82159A1966002281E4 /* poOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = poOpenGLView.h; path = ../platform/poOpenGLView.h; sourceTree = "<group>"; };
+		2BF92A83159A1966002281E4 /* poOpenGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = poOpenGLView.mm; path = ../platform/poOpenGLView.mm; sourceTree = "<group>"; };
+		2BF92A86159A1966002281E4 /* SimpleDropShadowApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleDropShadowApp.h; sourceTree = "<group>"; };
+		2BF92A87159A1966002281E4 /* SimpleDropShadowApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleDropShadowApp.cpp; sourceTree = "<group>"; };
+		2BF92A89159A1966002281E4 /* AppConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppConfig.cpp; sourceTree = "<group>"; };
+		2BF92A8B159A1966002281E4 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../platform/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		2BF92A92159A198D002281E4 /* DropShadow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DropShadow.cpp; sourceTree = "<group>"; };
+		2BF92A93159A198D002281E4 /* DropShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropShadow.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BF92A6C159A1966002281E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BF92A64159A1966002281E4 = {
+			isa = PBXGroup;
+			children = (
+				2BF92A72159A1966002281E4 /* SimpleDropShadow */,
+				2BF92A70159A1966002281E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BF92A70159A1966002281E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BF92A6F159A1966002281E4 /* SimpleDropShadow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BF92A72159A1966002281E4 /* SimpleDropShadow */ = {
+			isa = PBXGroup;
+			children = (
+				2BF92A73159A1966002281E4 /* platform */,
+				2BF92A85159A1966002281E4 /* application */,
+			);
+			path = SimpleDropShadow;
+			sourceTree = "<group>";
+		};
+		2BF92A73159A1966002281E4 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				2BF92A74159A1966002281E4 /* Debug.xcconfig */,
+				2BF92A75159A1966002281E4 /* Release.xcconfig */,
+				2BF92A76159A1966002281E4 /* AppDelegate.h */,
+				2BF92A77159A1966002281E4 /* AppDelegate.mm */,
+				2BF92A79159A1966002281E4 /* en.strings */,
+				2BF92A7B159A1966002281E4 /* main.m */,
+				2BF92A7D159A1966002281E4 /* main.pch */,
+				2BF92A7F159A1966002281E4 /* main.plist */,
+				2BF92A80159A1966002281E4 /* main.xib */,
+				2BF92A82159A1966002281E4 /* poOpenGLView.h */,
+				2BF92A83159A1966002281E4 /* poOpenGLView.mm */,
+				2BF92A8B159A1966002281E4 /* OpenSans-Regular.ttf */,
+			);
+			name = platform;
+			sourceTree = "<group>";
+		};
+		2BF92A85159A1966002281E4 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				2BF92A86159A1966002281E4 /* SimpleDropShadowApp.h */,
+				2BF92A87159A1966002281E4 /* SimpleDropShadowApp.cpp */,
+				2BF92A89159A1966002281E4 /* AppConfig.cpp */,
+				2BF92A92159A198D002281E4 /* DropShadow.cpp */,
+				2BF92A93159A198D002281E4 /* DropShadow.h */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BF92A6E159A1966002281E4 /* SimpleDropShadow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BF92A8F159A1966002281E4 /* Build configuration list for PBXNativeTarget "SimpleDropShadow" */;
+			buildPhases = (
+				2BF92A6B159A1966002281E4 /* Sources */,
+				2BF92A6C159A1966002281E4 /* Frameworks */,
+				2BF92A6D159A1966002281E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleDropShadow;
+			productName = SimpleDropShadow;
+			productReference = 2BF92A6F159A1966002281E4 /* SimpleDropShadow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BF92A66159A1966002281E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 2BF92A69159A1966002281E4 /* Build configuration list for PBXProject "SimpleDropShadow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2BF92A64159A1966002281E4;
+			productRefGroup = 2BF92A70159A1966002281E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BF92A6E159A1966002281E4 /* SimpleDropShadow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BF92A6D159A1966002281E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF92A7A159A1966002281E4 /* en.strings in Resources */,
+				2BF92A7E159A1966002281E4 /* main.pch in Resources */,
+				2BF92A81159A1966002281E4 /* main.xib in Resources */,
+				2BF92A8C159A1966002281E4 /* OpenSans-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BF92A6B159A1966002281E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF92A78159A1966002281E4 /* AppDelegate.mm in Sources */,
+				2BF92A7C159A1966002281E4 /* main.m in Sources */,
+				2BF92A84159A1966002281E4 /* poOpenGLView.mm in Sources */,
+				2BF92A88159A1966002281E4 /* SimpleDropShadowApp.cpp in Sources */,
+				2BF92A8A159A1966002281E4 /* AppConfig.cpp in Sources */,
+				2BF92A94159A198D002281E4 /* DropShadow.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2BF92A8D159A1966002281E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF92A74159A1966002281E4 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2BF92A8E159A1966002281E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF92A75159A1966002281E4 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		2BF92A90159A1966002281E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2BF92A91159A1966002281E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BF92A69159A1966002281E4 /* Build configuration list for PBXProject "SimpleDropShadow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BF92A8D159A1966002281E4 /* Debug */,
+				2BF92A8E159A1966002281E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BF92A8F159A1966002281E4 /* Build configuration list for PBXNativeTarget "SimpleDropShadow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BF92A90159A1966002281E4 /* Debug */,
+				2BF92A91159A1966002281E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BF92A66159A1966002281E4 /* Project object */;
+}
