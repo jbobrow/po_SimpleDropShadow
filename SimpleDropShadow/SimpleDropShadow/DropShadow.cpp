@@ -16,25 +16,25 @@ DropShadow::DropShadow( poObject *src, float spread, float a )
 	
 	poTexture* tex;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_top_left.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_top_left.png");
 	top_left->setAlignment( PO_ALIGN_BOTTOM_RIGHT );
 	top_left->position = poPoint( 0.f, 0.f );
 	top_left->placeTexture( tex, PO_TEX_FIT_EXACT);
 	top_left->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_top_center.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_top_center.png");
 	top_center->setAlignment( PO_ALIGN_BOTTOM_LEFT );
 	top_center->position = poPoint( 0.f, 0.f );
 	top_center->placeTexture( tex, PO_TEX_FIT_EXACT);
 	top_center->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_top_right.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_top_right.png");
 	top_right->setAlignment( PO_ALIGN_BOTTOM_LEFT );
 	top_right->position = poPoint( dimensions.x, 0.f );
 	top_right->placeTexture( tex, PO_TEX_FIT_EXACT);
 	top_right->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_center_left.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_center_left.png");
 	center_left->setAlignment( PO_ALIGN_TOP_RIGHT );
 	center_left->position = poPoint( 0.f, 0.f );
 	center_left->placeTexture( tex, PO_TEX_FIT_EXACT);
@@ -45,25 +45,25 @@ DropShadow::DropShadow( poObject *src, float spread, float a )
 	center_center->position = poPoint( 0.f, 0.f );
 	center_center->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_center_right.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_center_right.png");
 	center_right->setAlignment( PO_ALIGN_TOP_LEFT );
 	center_right->position = poPoint( dimensions.x, 0.f );
 	center_right->placeTexture( tex, PO_TEX_FIT_EXACT);
 	center_right->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_bottom_left.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_bottom_left.png");
 	bottom_left->setAlignment( PO_ALIGN_TOP_RIGHT );
 	bottom_left->position = poPoint( 0.f, dimensions.y );
 	bottom_left->placeTexture( tex, PO_TEX_FIT_EXACT);
 	bottom_left->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_bottom_center.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_bottom_center.png");
 	bottom_center->setAlignment( PO_ALIGN_TOP_LEFT );
 	bottom_center->position = poPoint( 0.f, dimensions.y );
 	bottom_center->placeTexture( tex, PO_TEX_FIT_EXACT);
 	bottom_center->alpha = a;
 	
-	tex = poGetTexture("dropShadowAssets/dropShadow_bottom_right.png");
+	tex = getTextureClamped("dropShadowAssets/dropShadow_bottom_right.png");
 	bottom_right->setAlignment( PO_ALIGN_TOP_LEFT );
 	bottom_right->position = poPoint( dimensions.x, dimensions.y );
 	bottom_right->placeTexture( tex, PO_TEX_FIT_EXACT);
@@ -124,6 +124,14 @@ void DropShadow::setSpread( float spread){
 	bottom_center->reshape( dimensions.x, spread );
 	bottom_right->reshape( spread, spread );
 	
+}
+
+poTexture* DropShadow::getTextureClamped(std::string s){
+	poTexture* tex;
+	tex = poGetTexture(s);
+	tex->setWrapS(GL_CLAMP_TO_EDGE);
+	tex->setWrapT(GL_CLAMP_TO_EDGE);
+	return tex;
 }
 
 FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientation)

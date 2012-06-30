@@ -28,6 +28,7 @@ public:
 	
 	void setAlpha( float a );
 	void setSpread( float spread );
+	poTexture* getTextureClamped( std::string s );
 	
 	poRectShape* top_left;
 	poRectShape* top_center;
