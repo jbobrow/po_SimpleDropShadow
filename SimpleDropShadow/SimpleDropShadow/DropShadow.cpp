@@ -126,14 +126,6 @@ void DropShadow::setSpread( float spread){
 	
 }
 
-poTexture* DropShadow::getTextureClamped(std::string s){
-	poTexture* tex;
-	tex = poGetTexture(s);
-	tex->setWrapS(GL_CLAMP_TO_EDGE);
-	tex->setWrapT(GL_CLAMP_TO_EDGE);
-	return tex;
-}
-
 FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientation)
 {
 	
@@ -150,7 +142,7 @@ FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientati
 	switch (orientation) {
 		case PO_FADE_OUT_TOP:
 			top_center = new poRectShape( dimensions.x, spread );
-			tex = poGetTexture("dropShadowAssets/dropShadow_top_center.png");
+			tex = getTextureClamped("dropShadowAssets/dropShadow_top_center.png");
 			top_center->setAlignment( PO_ALIGN_BOTTOM_LEFT );
 			top_center->position = poPoint( 0.f, 0.f );
 			top_center->placeTexture( tex, PO_TEX_FIT_EXACT);
@@ -159,7 +151,7 @@ FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientati
 			
 		case PO_FADE_OUT_RIGHT:
 			center_right = new poRectShape( spread, dimensions.y );
-			tex = poGetTexture("dropShadowAssets/dropShadow_center_right.png");
+			tex = getTextureClamped("dropShadowAssets/dropShadow_center_right.png");
 			center_right->setAlignment( PO_ALIGN_TOP_LEFT );
 			center_right->position = poPoint( dimensions.x, 0.f );
 			center_right->placeTexture( tex, PO_TEX_FIT_EXACT);
@@ -168,7 +160,7 @@ FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientati
 			
 		case PO_FADE_OUT_BOTTOM:
 			bottom_center = new poRectShape( dimensions.x, spread );
-			tex = poGetTexture("dropShadowAssets/dropShadow_bottom_center.png");
+			tex = getTextureClamped("dropShadowAssets/dropShadow_bottom_center.png");
 			bottom_center->setAlignment( PO_ALIGN_TOP_LEFT );
 			bottom_center->position = poPoint( 0.f, dimensions.y );
 			bottom_center->placeTexture( tex, PO_TEX_FIT_EXACT);
@@ -177,7 +169,7 @@ FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientati
 			
 		case PO_FADE_OUT_LEFT:
 			center_left = new poRectShape( spread, dimensions.y );
-			tex = poGetTexture("dropShadowAssets/dropShadow_center_left.png");
+			tex = getTextureClamped("dropShadowAssets/dropShadow_center_left.png");
 			center_left->setAlignment( PO_ALIGN_TOP_RIGHT );
 			center_left->position = poPoint( 0.f, 0.f );
 			center_left->placeTexture( tex, PO_TEX_FIT_EXACT);
@@ -192,4 +184,12 @@ FadeOut::FadeOut( poPoint dimensions, float spread, fadeOutOrientation orientati
 
 FadeOut::~FadeOut(){
 	
+}
+
+poTexture* getTextureClamped(std::string s){
+	poTexture* tex;
+	tex = poGetTexture(s);
+	tex->setWrapS(GL_CLAMP_TO_EDGE);
+	tex->setWrapT(GL_CLAMP_TO_EDGE);
+	return tex;
 }

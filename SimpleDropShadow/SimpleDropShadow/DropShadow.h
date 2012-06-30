@@ -28,7 +28,6 @@ public:
 	
 	void setAlpha( float a );
 	void setSpread( float spread );
-	poTexture* getTextureClamped( std::string s );
 	
 	poRectShape* top_left;
 	poRectShape* top_center;
@@ -68,3 +67,6 @@ public:
 	
 	poPoint* dimensions;
 };
+
+// adding a special get clamped texture function to make the textures properly stretch
+poTexture* getTextureClamped( std::string s );
