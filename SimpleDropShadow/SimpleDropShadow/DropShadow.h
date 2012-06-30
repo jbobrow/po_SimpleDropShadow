@@ -19,7 +19,7 @@
 class DropShadow : public poObject
 {
 public:
-	DropShadow( poObject *src, float spread = 30.f, float a = .5f);
+	DropShadow( poObject *src, float spread = 30.f, float a = .5f, poPoint p = poPoint(0,0,0));
 	virtual ~DropShadow();
 	
 	virtual void update();
@@ -28,6 +28,7 @@ public:
 	
 	void setAlpha( float a );
 	void setSpread( float spread );
+	void setShadowOffset( poPoint p );
 	
 	poRectShape* top_left;
 	poRectShape* top_center;
@@ -40,6 +41,7 @@ public:
 	poRectShape* bottom_right;
 	
 	poPoint dimensions;
+	poPoint shadow_offset;
 };
 
 

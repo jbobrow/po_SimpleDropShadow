@@ -42,6 +42,7 @@ SimpleDropShadowApp::SimpleDropShadowApp() {
 	control = new poControlPanel( "controlPanel", poColor(0,0.3,0.3,0.6) );
 	control->addSliderF( "amplitude",0.f, 100.f, this );
 	control->addSliderF( "alpha",0.f, 1.f, this );
+	control->addPointSlider( "offset", poPoint(-25,-25), poPoint(25,25), this );
 	addChild(control);
 }
 
@@ -73,4 +74,8 @@ void SimpleDropShadowApp::messageHandler(const std::string &msg, const poDiction
 	if ( msg == "alpha" ) {
         imageAndShadow->setAlpha(control->getFloat("alpha"));
     }
+	
+	if ( msg == "offset" ) {
+		imageAndShadow->setShadowOffset(control->getPoint("offset"));
+	}
 }
